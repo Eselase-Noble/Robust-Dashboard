@@ -24,6 +24,7 @@ import ProductsSidebar from '@/components/sidebars/ProductsSidebar.vue'
 import UsersSidebar from '@/components/sidebars/UsersSidebar.vue'
 import SalesSidebar from '@/components/sidebars/SalesSidebar.vue'
 import StocksSidebar from '@/components/sidebars/StocksSidebar.vue'
+import PortalSidebar from '@/components/sidebars/PortalSidebar.vue'
 
 interface User {
   name: string
@@ -48,7 +49,8 @@ export default defineComponent({
       '/products': ProductsSidebar,
       '/user': UsersSidebar,
       '/sales': SalesSidebar,
-      '/stocks': StocksSidebar
+      '/stocks': StocksSidebar,
+      '/portal': PortalSidebar,
     }
 
     // Compute which sidebar component to render

@@ -65,6 +65,7 @@ const mainMenus = ref([
   { name: 'Products', path: '/products' },
   { name: 'Stocks', path: '/stocks' },
   { name: 'Users', path: '/user' },
+  { name: 'Portal', path: '/portal' },
 ])
 
 function logout() {

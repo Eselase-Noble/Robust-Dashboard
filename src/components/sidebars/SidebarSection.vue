@@ -12,11 +12,11 @@
       </svg>
     </button>
 
-    <ul v-if="expanded" class="pl-4 mt-1 space-y-1">
+    <ul v-if="expanded" class="pl-4 mt-1 space-y-1 ">
       <li v-for="item in items" :key="item.label">
         <router-link
           :to="item.to"
-          class="block px-3 py-2 rounded-md hover:bg-gray-600"
+          class="block px-3 py-2 rounded-md  hover:bg-gray-600"
           active-class="bg-gray-600"
         >
           {{ item.label }}
