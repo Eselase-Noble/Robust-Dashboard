@@ -1,3 +1,11 @@
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'AuditProducts'
+});
+</script>
+
 <template>
   <div class="p-6">
     <h1 class="text-3xl font-semibold text-gray-900">Audit Products</h1>
@@ -6,10 +14,3 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  name: 'AuditProducts'
-});
-</script>

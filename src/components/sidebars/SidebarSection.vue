@@ -1,3 +1,14 @@
+<script lang="ts" setup>
+import { ref } from 'vue'
+
+defineProps<{
+  title: string
+  items: Array<{ label: string; to: string }>
+}>()
+
+const expanded = ref(false)
+</script>
+
 <template>
   <div>
     <button
@@ -26,13 +37,4 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref } from 'vue'
 
-defineProps<{
-  title: string
-  items: Array<{ label: string; to: string }>
-}>()
-
-const expanded = ref(false)
-</script>

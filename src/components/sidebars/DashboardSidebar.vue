@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import SidebarSection from '@/components/sidebars/SidebarSection.vue'
+</script>
+
 <template>
   <div class="p-6">
     <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">Dashboard</h3>
@@ -25,6 +29,4 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import SidebarSection from '@/components/sidebars/SidebarSection.vue'
-</script>
+

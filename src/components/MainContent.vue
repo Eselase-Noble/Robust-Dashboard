@@ -1,13 +1,3 @@
-<template>
-  <div class="h-full overflow-y-auto">
-    <router-view v-slot="{ Component }">
-      <transition name="fade" mode="out-in">
-        <component :is="Component" />
-      </transition>
-    </router-view>
-  </div>
-</template>
-
 <script lang="ts">
 import { defineComponent } from 'vue';
 
@@ -27,3 +17,14 @@ export default defineComponent({
   opacity: 0;
 }
 </style>
+
+<template>
+  <div class="h-full overflow-y-auto">
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
+  </div>
+</template>
+

@@ -1,19 +1,3 @@
-<template>
-  <div class="bg-gray-700 text-white h-full flex flex-col overflow-y-auto">
-    <!-- User info section -->
-    <div class="p-6 border-b border-gray-600 flex items-center space-x-4">
-      <img :src="currentUser.avatar" alt="User" class="w-12 h-12 rounded-full" />
-      <div>
-        <div class="font-medium">{{ currentUser.name }}</div>
-        <div class="text-sm text-gray-300">{{ currentUser.role }}</div>
-      </div>
-    </div>
-
-    <!-- Dynamic sidebar content -->
-    <component :is="activeSidebarComponent" class="flex-1 overflow-y-auto" />
-  </div>
-</template>
-
 <script lang="ts">
 import { defineComponent, PropType, computed } from 'vue'
 import { useRoute } from 'vue-router'
@@ -67,3 +51,21 @@ export default defineComponent({
   }
 })
 </script>
+
+
+<template>
+  <div class="bg-gray-700 text-white h-full flex flex-col overflow-y-auto">
+    <!-- User info section -->
+    <div class="p-6 border-b border-gray-600 flex items-center space-x-4">
+      <img :src="currentUser.avatar" alt="User" class="w-12 h-12 rounded-full" />
+      <div>
+        <div class="font-medium">{{ currentUser.name }}</div>
+        <div class="text-sm text-gray-300">{{ currentUser.role }}</div>
+      </div>
+    </div>
+
+    <!-- Dynamic sidebar content -->
+    <component :is="activeSidebarComponent" class="flex-1 overflow-y-auto" />
+  </div>
+</template>
+

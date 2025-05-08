@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import SidebarSection from '@/components/sidebars/SidebarSection.vue'
+</script>
+
 <template>
   <div class="p-6 space-y-6">
 
@@ -25,6 +29,4 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import SidebarSection from '@/components/sidebars/SidebarSection.vue'
-</script>
+

@@ -1,3 +1,40 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import Sidebar from '@/components/Sidebar.vue'
+import MainContent from '@/components/MainContent.vue'
+
+const route = useRoute()
+const router = useRouter()
+
+const currentUser = ref({
+  name: 'John Doe',
+  role: 'Administrator',
+  avatar: '@/assets/user-avatar.png'
+})
+
+const mainMenus = ref([
+  { name: 'Dashboard', path: '/dashboard' },
+  { name: 'Sales', path: '/sales' },
+  { name: 'Products', path: '/products' },
+  { name: 'Stocks', path: '/stocks' },
+  { name: 'Users', path: '/user' },
+  { name: 'Portal', path: '/portal' },
+])
+
+function logout() {
+  console.log('Logging out...')
+
+  // Clear user session (localStorage, sessionStorage, cookies, etc.)
+  localStorage.removeItem('user')  // Or whichever method you're using to store user data
+
+  // Redirect to login page after logging out
+  router.push('/login')
+}
+</script>
+
+
+
 <template>
   <div class="flex flex-col min-h-screen">
     <!-- Full-width header -->
@@ -44,38 +81,4 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import Sidebar from '@/components/Sidebar.vue'
-import MainContent from '@/components/MainContent.vue'
-
-const route = useRoute()
-const router = useRouter()
-
-const currentUser = ref({
-  name: 'John Doe',
-  role: 'Administrator',
-  avatar: '@/assets/user-avatar.png'
-})
-
-const mainMenus = ref([
-  { name: 'Dashboard', path: '/dashboard' },
-  { name: 'Sales', path: '/sales' },
-  { name: 'Products', path: '/products' },
-  { name: 'Stocks', path: '/stocks' },
-  { name: 'Users', path: '/user' },
-  { name: 'Portal', path: '/portal' },
-])
-
-function logout() {
-  console.log('Logging out...')
-
-  // Clear user session (localStorage, sessionStorage, cookies, etc.)
-  localStorage.removeItem('user')  // Or whichever method you're using to store user data
-
-  // Redirect to login page after logging out
-  router.push('/login')
-}
-</script>
 
